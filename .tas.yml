@@ -4,10 +4,10 @@ preRun:
         - npm install
 preMerge:
   pattern:
-    - "./test/**.ts"
+    - "./test/control.ts"
 postMerge:
   pattern: 
-    - "./test/**.ts"
+    - "./test/control.ts"
 postRun:
      command:
         - node --version
