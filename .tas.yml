@@ -1,16 +1,16 @@
 framework: mocha
-tier: large
-postMerge:
-  pattern: 
-    - "./test/*.ts"
-preMerge:
-  pattern:
-    - "./test/*.ts"
 preRun:
      command:
         - npm install
         - npm run build
+preMerge:
+  pattern:
+    - "./test/*.ts"
+postMerge:
+  pattern: 
+    - "./test/*.ts"
 postRun:
      command:
         - node --version
+configFile: "mocharc.yml"
 version: 1.0
