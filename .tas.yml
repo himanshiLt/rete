@@ -2,13 +2,12 @@ framework: mocha
 preRun:
      command:
         - npm install
-        - npm run build
 preMerge:
   pattern:
-    - "./test/*.ts"
+    - "./test/**.ts"
 postMerge:
   pattern: 
-    - "./test/*.ts"
+    - "./test/**.ts"
 postRun:
      command:
         - node --version
