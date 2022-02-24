@@ -1,13 +1,18 @@
+---
 framework: mocha
 preRun:
      command:
-        - npm install
+        - npm ci
 preMerge:
+  env:
+    BABEL_ENV: test
   pattern:
-    - "./test/control.ts"
+    - "./test/**.ts"
 postMerge:
+  env:
+    BABEL_ENV: test
   pattern: 
-    - "./test/control.ts"
+    - "./test/**.ts"
 postRun:
      command:
         - node --version
